@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Junaid Bin Zulfiqar — Computer Engineer &amp; Automation Builder</title>
 <meta name="description" content="Junaid Bin Zulfiqar — Computer Engineering student at UET Taxila, n8n automation developer, and IEEE volunteer leader.">
-
-<!-- Google AdSense Verification Code -->
-<script async src="https://googlesyndication.com" crossorigin="anonymous"></script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1269318144467687" crossorigin="anonymous"></script>
 <style>
   :root{
     --black:#101820;
@@ -24,6 +21,7 @@
     --blue-soft:#E6FBF8;
     --line:#263743;
     --max:1180px;
+    font-family:'Archivo', system-ui, sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
@@ -38,10 +36,10 @@
   h1,h2,h3{ font-family:'Anton', sans-serif; font-weight:400; letter-spacing:0.01em; text-transform:uppercase; line-height:1; }
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
+  ul{list-style:none;}
   .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
   @media (max-width:600px){ .wrap{padding:0 18px;} }
   a:focus-visible, button:focus-visible{ outline:3px solid var(--yellow); outline-offset:3px; }
-
   .mono{ font-family:'JetBrains Mono', monospace; }
 
   /* ---------- NAV ---------- */
@@ -59,12 +57,12 @@
   }
   .brandwrap{display:flex; align-items:center; gap:10px;}
   .brandtag{ font-family:'JetBrains Mono', monospace; font-size:0.78rem; color:#B7C5D6; }
+  @media(max-width:520px){ .brandtag{display:none;} }
   .navlinks{ display:none; gap:26px; font-size:0.88rem; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; }
   @media(min-width:840px){ .navlinks{display:flex;} }
   .navlinks a{ position:relative; }
   .navlinks a::after{ content:''; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:var(--yellow); transition:width .25s ease; }
-  .navlinks a.active{ color:var(--yellow); }
-  .navlinks a.active::after{ width:100%; }
+  .navlinks a:hover::after{ width:100%; }
   .navright{display:flex; align-items:center; gap:10px;}
   .pill{
     border:2px solid var(--white); border-radius:30px; padding:8px 16px;
@@ -83,7 +81,6 @@
   .hero{ padding:70px 0 60px; position:relative; }
   .hero-grid{ display:grid; grid-template-columns:1.25fr 0.9fr; gap:50px; align-items:center; }
   @media(max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:40px;} }
-
   .reveal{ opacity:0; transform:translateY(18px); }
   .hero.play .reveal{ opacity:1; transform:translateY(0); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1); }
   .hero.play .h1{transition-delay:.05s;}
@@ -91,14 +88,13 @@
   .hero.play .h3{transition-delay:.28s;}
   .hero.play .h4{transition-delay:.4s;}
   .hero.play .h5{transition-delay:.22s;}
-
   .tagbox{
     display:inline-flex; align-items:center; gap:8px; background:var(--yellow); color:var(--black);
     border:2px solid var(--black); border-radius:4px; padding:6px 12px; font-weight:800;
     font-size:0.82rem; text-transform:uppercase; transform:rotate(-1.5deg); margin-bottom:20px;
   }
   .hero h1{
-    font-size:clamp(2.6rem, 6.5vw, 4.4rem); color:#FFFFFF; text-shadow:0 2px 18px rgba(0,0,0,.28);
+    font-size:clamp(2.6rem, 6.5vw, 4.4rem); color:#FFFFFF;
     text-shadow: 3px 3px 0 rgba(124,92,255,.55);
     max-width:11ch;
   }
@@ -106,8 +102,7 @@
   .hero-actions{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
   .btn{
     padding:13px 24px; border-radius:6px; font-size:0.9rem; font-weight:800; text-transform:uppercase;
-    border:2px solid var(--black); transition:transform .15s ease;
-    display:inline-block;
+    border:2px solid var(--black); transition:transform .15s ease; display:inline-block;
   }
   .btn-yellow{ background:var(--yellow); color:var(--black); }
   .btn-yellow:hover{ transform:translateY(-3px) rotate(-1deg); }
@@ -116,8 +111,9 @@
 
   .photo-frame{ position:relative; justify-self:end; width:100%; max-width:320px; }
   .photo-frame .backer{ position:absolute; inset:12px -12px -12px 12px; background:linear-gradient(135deg,var(--red),var(--yellow)); border-radius:8px; z-index:0; }
-  .photo-frame .imgwrap{ position:relative; z-index:1; border:3px solid var(--black); outline:2px solid var(--white); border-radius:8px; overflow:hidden; background:var(--black); }
-  .photo-frame img{ filter:grayscale(0.1) contrast(1.05); }
+  .photo-frame .imgwrap{ position:relative; z-index:1; border:3px solid var(--black); outline:2px solid var(--white); border-radius:8px; overflow:hidden; background:var(--black); aspect-ratio:4/5; display:flex; align-items:center; justify-content:center; }
+  .photo-frame img{ filter:grayscale(0.1) contrast(1.05); width:100%; height:100%; object-fit:cover; }
+  .photo-frame .placeholder{ font-family:'Anton',sans-serif; font-size:4rem; color:var(--grey); }
   .photo-tag{
     position:relative; z-index:2; margin-top:18px; background:var(--black); border:2px solid var(--white);
     border-radius:4px; padding:8px 12px; display:flex; justify-content:space-between; font-size:0.78rem;
@@ -136,7 +132,6 @@
   .section-head{ margin-bottom:40px; opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
   .section-head.on{ opacity:1; transform:translateY(0); }
 
-  /* generic white panel */
   .panel{
     position:relative; background:var(--card); color:var(--black);
     border:3px solid var(--black); border-radius:8px; padding:36px;
@@ -144,10 +139,10 @@
     transition:opacity .55s ease, transform .55s cubic-bezier(.2,.8,.2,1);
   }
   .panel.on{ opacity:1; transform:translateY(0) scale(1); }
-  .rolegrid .panel:nth-child(2){animation-delay:.08s;}
-  .rolegrid .panel:nth-child(3){animation-delay:.16s;}
-  .rolegrid .panel:nth-child(4){animation-delay:.24s;}
-  .rolegrid .panel:nth-child(5){animation-delay:.32s;}
+  .rolegrid .panel:nth-child(2){transition-delay:.08s;}
+  .rolegrid .panel:nth-child(3){transition-delay:.16s;}
+  .rolegrid .panel:nth-child(4){transition-delay:.24s;}
+  .rolegrid .panel:nth-child(5){transition-delay:.32s;}
   .panel::after{
     content:''; position:absolute; inset:8px -8px -8px 8px; background:linear-gradient(135deg,var(--red),var(--yellow));
     border-radius:8px; z-index:-1;
@@ -160,9 +155,219 @@
   .stat{ border:2px solid var(--black); border-radius:6px; padding:16px; background:var(--white); }
   .stat .num{ font-family:'Anton', sans-serif; font-size:2rem; color:var(--red); }
   .stat .label{ font-size:0.82rem; color:var(--black); font-weight:700; margin-top:4px;}
+
+  /* ---------- EDUCATION / ROLES ---------- */
+  .rolegrid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  @media(max-width:760px){ .rolegrid{grid-template-columns:1fr;} }
+  .role-org{ font-size:0.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.03em; color:var(--red); font-family:'JetBrains Mono',monospace; }
+  .role-title{ font-family:'Anton',sans-serif; font-size:1.3rem; text-transform:uppercase; margin-top:8px; }
+  .role-desc{ margin-top:10px; font-size:0.92rem; color:#333; line-height:1.6; }
+
+  /* ---------- PROJECTS ---------- */
+  .projgrid{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  @media(max-width:760px){ .projgrid{grid-template-columns:1fr;} }
+  .proj-num{ font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:var(--red); font-weight:800; }
+  .proj-title{ font-family:'Anton',sans-serif; font-size:1.4rem; text-transform:uppercase; margin-top:8px; }
+  .proj-desc{ margin-top:10px; font-size:0.92rem; color:#333; line-height:1.6; }
+  .proj-link{ display:inline-flex; align-items:center; gap:6px; margin-top:18px; font-weight:800; font-size:0.82rem; text-transform:uppercase; border-bottom:2px solid var(--black); padding-bottom:2px; }
+
+  /* ---------- SKILLS ---------- */
+  .skillwrap{ display:flex; flex-wrap:wrap; gap:12px; }
+  .skillchip{ background:var(--black); border:2px solid var(--white); border-radius:30px; padding:10px 18px; font-size:0.85rem; font-weight:700; }
+  .skillchip:nth-child(3n+1){ border-color:var(--yellow); }
+  .skillchip:nth-child(3n+2){ border-color:var(--red); }
+
+  /* ---------- CONTACT ---------- */
+  .contact-panel{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:0; overflow:hidden; padding:0; }
+  @media(max-width:760px){ .contact-panel{grid-template-columns:1fr;} }
+  .contact-left{ padding:40px; }
+  .contact-right{ background:var(--black); color:var(--white); padding:40px; border-left:3px solid var(--black); }
+  @media(max-width:760px){ .contact-right{border-left:none; border-top:3px solid var(--black);} }
+  .contact-right a{ display:block; font-family:'JetBrains Mono',monospace; font-size:0.95rem; padding:10px 0; border-bottom:1px solid var(--line); color:var(--white); }
+  .contact-right a:hover{ color:var(--yellow); }
+
+  footer{ padding:30px 0 50px; text-align:center; color:var(--grey); font-size:0.8rem; font-family:'JetBrains Mono',monospace; }
 </style>
 </head>
 <body>
-<!-- Rest of your website layout body content goes here -->
+
+<div class="navshell">
+  <nav>
+    <div class="brandwrap">
+      <span class="brandbox">JZ</span>
+      <span class="brandtag">Computer Engineer</span>
+    </div>
+    <div class="navlinks">
+      <a href="#about" class="active">About</a>
+      <a href="#roles">Roles</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navright">
+      <span class="pill">Taxila, Pakistan</span>
+      <a class="cta-yellow" href="mailto:Junaidzulfiqar475@gmail.com">Say hello</a>
+    </div>
+  </nav>
+</div>
+
+<section class="hero play">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tagbox reveal h1">Available for freelance work</span>
+      <h1 class="reveal h2">Junaid Bin Zulfiqar</h1>
+      <p class="lede reveal h3">Where engineering discipline meets creative automation. Computer Engineering student at UET Taxila building n8n automations, IEEE media, and civic-tech tools.</p>
+      <div class="hero-actions reveal h4">
+        <a class="btn btn-yellow" href="#projects">See the work</a>
+        <a class="btn btn-outline" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="reveal h5">
+      <div class="photo-frame">
+        <div class="backer"></div>
+        <div class="imgwrap">
+          <span class="placeholder">JZ</span>
+        </div>
+      </div>
+      <div class="photo-tag">
+        <span>junaidzulfiqarr.me</span>
+        <span>01/2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="section-head">
+      <span class="section-tag">About</span>
+      <h2 class="section-title">Building things that ship</h2>
+      <p class="section-sub">BS Computer Engineering student at UET Taxila (ID 25-CP-50), splitting time between coursework, IEEE volunteer leadership, and a growing n8n automation freelance practice on Fiverr.</p>
+      <div class="about-stats">
+        <div class="stat"><div class="num">4+</div><div class="label">Portfolio Projects</div></div>
+        <div class="stat"><div class="num">2</div><div class="label">IEEE Deputy Director Roles</div></div>
+        <div class="stat"><div class="num">30</div><div class="label">Day n8n Build Challenge</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="roles">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Roles</span>
+      <h2 class="section-title">Where I show up</h2>
+    </div>
+    <div class="rolegrid">
+      <div class="panel">
+        <div class="role-org">IEEE IAS · UET Taxila</div>
+        <div class="role-title">Deputy Director, Team Marketing</div>
+        <p class="role-desc">Leading marketing efforts for IEEE Industrial Applications Society at UET Taxila.</p>
+      </div>
+      <div class="panel">
+        <div class="role-org">IEEE SB · UET Taxila</div>
+        <div class="role-title">Deputy Director, Media</div>
+        <p class="role-desc">Directing media output for the IEEE Student Branch, including the Industry Nexus event series.</p>
+      </div>
+      <div class="panel">
+        <div class="role-org">@CP.MediaClub</div>
+        <div class="role-title">Content Lead</div>
+        <p class="role-desc">Running captions and promo video production for the Computer Engineering department's Instagram.</p>
+      </div>
+      <div class="panel">
+        <div class="role-org">Fiverr</div>
+        <div class="role-title">Freelance n8n Automation Developer</div>
+        <p class="role-desc">Building production-grade automations for clients, backed by a 30-day daily-build practice challenge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Projects</span>
+      <h2 class="section-title">Featured work</h2>
+    </div>
+    <div class="projgrid">
+      <div class="panel">
+        <div class="proj-num">01</div>
+        <div class="proj-title">Shanakht Pakistan</div>
+        <p class="proj-desc">CNIC-based crime records system — flagship portfolio piece.</p>
+        <a class="proj-link" href="https://github.com/JunaidZulfiqar07/DAY-12-SHANAKHT-PAKISTAN.git" target="_blank" rel="noopener">View repo</a>
+      </div>
+      <div class="panel">
+        <div class="proj-num">02</div>
+        <div class="proj-title">AI Resume Analyzer</div>
+        <p class="proj-desc">Automated resume analysis and feedback tool.</p>
+        <a class="proj-link" href="https://github.com/JunaidZulfiqar07/DAY-02-AI-RESUME-ANALYZER.git" target="_blank" rel="noopener">View repo</a>
+      </div>
+      <div class="panel">
+        <div class="proj-num">03</div>
+        <div class="proj-title">JZ Taste</div>
+        <p class="proj-desc">Restaurant concept build.</p>
+        <a class="proj-link" href="https://github.com/JunaidZulfiqar07/Jz-Taste-Restaurant.git" target="_blank" rel="noopener">View repo</a>
+      </div>
+      <div class="panel">
+        <div class="proj-num">04</div>
+        <div class="proj-title">Citizen Complaint Management System</div>
+        <p class="proj-desc">A system for logging and tracking citizen complaints.</p>
+        <a class="proj-link" href="https://github.com/JunaidZulfiqar07/DAY-13-CITIZEN-COMPLAINT-SYSTEM.git" target="_blank" rel="noopener">View repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-tag">Skills</span>
+      <h2 class="section-title">Toolbox</h2>
+    </div>
+    <div class="skillwrap">
+      <span class="skillchip">n8n Automation</span>
+      <span class="skillchip">Flutter</span>
+      <span class="skillchip">Appwrite</span>
+      <span class="skillchip">Python</span>
+      <span class="skillchip">Git &amp; GitHub</span>
+      <span class="skillchip">Content Strategy</span>
+      <span class="skillchip">Video Production</span>
+      <span class="skillchip">Team Leadership</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="panel contact-panel">
+      <div class="contact-left">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title" style="color:var(--black); text-shadow:3px 3px 0 rgba(25,211,197,.35);">Let's build something</h2>
+        <p class="role-desc">Open to freelance automation work, IEEE collaborations, and internship conversations.</p>
+      </div>
+      <div class="contact-right">
+        <a href="mailto:Junaidzulfiqar475@gmail.com">Junaidzulfiqar475@gmail.com</a>
+        <a href="https://github.com/junaidzulfiqar07" target="_blank" rel="noopener">github.com/junaidzulfiqar07</a>
+        <a href="https://linkedin.com/in/junaidzulfiqar07" target="_blank" rel="noopener">linkedin.com/in/junaidzulfiqar07</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Junaid Bin Zulfiqar — junaidzulfiqarr.me</div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) e.target.classList.add('on');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.section-head, .panel').forEach(function (el) { io.observe(el); });
+  });
+</script>
+
 </body>
 </html>
